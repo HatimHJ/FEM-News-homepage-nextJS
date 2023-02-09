@@ -10,17 +10,16 @@ export default function Home() {
 			<Head>
 				<title>Frontend Mentor | News homepage</title>
 				<link rel="icon" href={favicon32x32} />
+				<link rel="preconnect" href="https://fonts.googleapis.com" />
+				<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+				<link
+					href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+					rel="stylesheet"
+				/>
 			</Head>
 			<div className={styles.container}>
 				<Navbar />
-				<div className={styles.content}>
-					<h2>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-						voluptatibus ea perspiciatis, doloribus esse reprehenderit nostrum
-						accusantium consectetur nemo. Commodi minus quasi iste unde error
-						reprehenderit fuga dicta eius fugiat!
-					</h2>
-				</div>
+				<div className={styles.content}></div>
 			</div>
 		</AppProvider>
 	);

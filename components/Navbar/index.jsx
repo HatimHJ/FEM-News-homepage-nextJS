@@ -1,41 +1,57 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { logo, iconMenuClose, iconMenu } from "../../images";
 import styles from "../../styles/Navbar.module.css";
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = React.useState(false);
+
 	return (
 		<nav className={styles.nav}>
+			{/* logo */}
 			<div className="logo">
 				<Image src={logo} alt="logo" />
 			</div>
+			{/* open toggler */}
 			<div className="toggler-links">
-				<div
-					className={`${styles.menuToggle} ${isOpen ? styles.active : ""}`}
-					onClick={() => setIsOpen(!isOpen)}
-				>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-				<div className={`${styles.linksWrapper} ${isOpen ? styles.show : ""}`}>
+				<Image
+					className={styles.open_toggler}
+					src={iconMenu}
+					alt="open toggler"
+					onClick={() => setIsOpen(true)}
+				/>
+			</div>
+			{/* menu links */}
+			<div
+				className={`${isOpen ? styles.show : ""} ${styles.menu_close_wrapper}`}
+			>
+				<div className={`${styles.menu_close}`}>
+					<Image
+						className={styles.close_toggler}
+						src={iconMenuClose}
+						alt="close toggler"
+						onClick={() => setIsOpen(false)}
+					/>
 					<ul className={`${isOpen ? styles.show : ""}`}>
-						<li> Home </li>
-						<li> New </li>
-						<li> Popular </li>
-						<li> Trending </li>
-						<li> Categories </li>
+						<li>
+							<Link href="/">Home</Link>
+						</li>
+						<li>
+							<Link href="/">New</Link>
+						</li>
+						<li>
+							<Link href="/">Popular</Link>
+						</li>
+						<li>
+							<Link href="/">Trending</Link>
+						</li>
+						<li>
+							<Link href="/">Categories</Link>
+						</li>
 					</ul>
 				</div>
 			</div>
-			{/* <Image
-					className={styles.toggler}
-					src={isOpen ? iconMenuClose : iconMenu}
-					alt="toggler"
-					onClick={() => setIsOpen(!isOpen)}
-					/> 
-				*/}
 		</nav>
 	);
 }
