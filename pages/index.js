@@ -1,12 +1,15 @@
 import Head from "next/head";
 import Navbar from "../components/Navbar";
-import { AppProvider } from "../context";
+
 import styles from "../styles/Home.module.css";
 import { favicon32x32 } from "../images";
+import { useGlobalContext } from "../context";
 
 export default function Home() {
+	const { isNight, setIsNight } = useGlobalContext();
+
 	return (
-		<AppProvider>
+		<>
 			<Head>
 				<title>Frontend Mentor | News homepage</title>
 				<link rel="icon" href={favicon32x32} />
@@ -17,10 +20,12 @@ export default function Home() {
 					rel="stylesheet"
 				/>
 			</Head>
-			<div className={styles.container}>
-				<Navbar />
-				<div className={styles.content}></div>
+			<div className={`root ${isNight ? "night" : ""}`}>
+				<div className={`${styles.container}`}>
+					<Navbar />
+					<div className={styles.content}></div>
+				</div>
 			</div>
-		</AppProvider>
+		</>
 	);
 }

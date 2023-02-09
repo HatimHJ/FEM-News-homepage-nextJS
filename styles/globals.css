@@ -1,12 +1,24 @@
-:root {
-	--Off-white: hsl(36, 100%, 99%);
-	--Grayish-blue: hsl(233, 8%, 79%);
-	--Dark-grayish-blue: hsl(236, 13%, 42%);
-	--Very-dark-blue: hsl(240, 100%, 5%);
+.root {
+	--bg-color: hsl(36, 100%, 99%);
+	--bg-color-2: hsl(233, 8%, 79%);
+	--text-color: hsl(236, 13%, 42%);
+	--text-color-2: hsl(240, 100%, 5%);
+
+	--Soft-orange: hsl(35, 77%, 62%);
+	--Soft-red: hsl(5, 85%, 63%);
+	background-color: var(--bg-color);
+}
+
+.root.night {
+	--bg-color: hsl(0, 0%, 17%);
+	--bg-color-2: hsl(0, 0%, 27%);
+	--text-color: hsl(0, 0%, 77%);
+	--text-color-2: hsl(0, 0%, 80%);
 
 	--Soft-orange: hsl(35, 77%, 62%);
 	--Soft-red: hsl(5, 85%, 63%);
 }
+
 html,
 body {
 	padding: 0;

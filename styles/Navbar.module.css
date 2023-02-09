@@ -4,8 +4,11 @@
 	justify-content: space-between;
 	position: relative;
 	padding: 2rem 0 0.3rem;
-	border-bottom: 1px dotted #ddd;
+	border-bottom: 1px dotted var(--text-color);
 	z-index: 0;
+}
+.dark img {
+	filter: invert(1);
 }
 .close_toggler,
 .open_toggler {
@@ -37,7 +40,7 @@
 	position: absolute;
 	transform: translateX(100%);
 	right: 0;
-	background-color: #fff;
+	background-color: var(--bg-color);
 	transition: all 0.4s;
 	padding: 2rem;
 	display: flex;
@@ -56,7 +59,7 @@
 }
 .menu_close ul a {
 	font-weight: 700;
-	color: var(--Dark-grayish-blue);
+	color: var(--text-color);
 	transition: color 0.3s;
 }
 .menu_close ul a:hover {
@@ -79,7 +82,7 @@
 		width: 100%;
 		height: 100%;
 		inset: initial;
-		background-color: #fff;
+		background-color: initial;
 	}
 	.menu_close {
 		width: auto;
@@ -87,7 +90,7 @@
 		position: static;
 		transform: translateX(0%);
 		justify-content: flex-end;
-		background-color: #fff;
+		background-color: initial;
 		transition: all 0.4s;
 		padding: 2rem;
 		display: flex;

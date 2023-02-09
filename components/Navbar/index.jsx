@@ -3,22 +3,24 @@ import Link from "next/link";
 import React from "react";
 import { logo, iconMenuClose, iconMenu } from "../../images";
 import styles from "../../styles/Navbar.module.css";
+import { useGlobalContext } from "../../context";
+import { Moon, Sun, Menu, X } from "react-feather";
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = React.useState(false);
-
+	const { isNight, setIsNight } = useGlobalContext();
 	return (
-		<nav className={styles.nav}>
+		<nav className={`${styles.nav} ${isNight ? styles.dark : ""}`}>
 			{/* logo */}
-			<div className="logo">
+			<div>
 				<Image src={logo} alt="logo" />
 			</div>
 			{/* open toggler */}
 			<div className="toggler-links">
-				<Image
+				<Menu
 					className={styles.open_toggler}
-					src={iconMenu}
-					alt="open toggler"
+					size="35"
+					color={isNight ? "#fff" : "#222"}
 					onClick={() => setIsOpen(true)}
 				/>
 			</div>
@@ -27,13 +29,16 @@ export default function Navbar() {
 				className={`${isOpen ? styles.show : ""} ${styles.menu_close_wrapper}`}
 			>
 				<div className={`${styles.menu_close}`}>
-					<Image
+					<X
+						size="35"
+						color={isNight ? "#fff" : "#222"}
 						className={styles.close_toggler}
-						src={iconMenuClose}
-						alt="close toggler"
 						onClick={() => setIsOpen(false)}
 					/>
 					<ul className={`${isOpen ? styles.show : ""}`}>
+						<li className={styles.theme} onClick={() => setIsNight(!isNight)}>
+							{isNight ? <Sun color="#fff" /> : <Moon />}
+						</li>
 						<li>
 							<Link href="/">Home</Link>
 						</li>

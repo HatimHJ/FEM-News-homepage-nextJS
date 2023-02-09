@@ -2,9 +2,10 @@ import React, { useState, useContext, useEffect } from "react";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-	const [state, setState] = useState("");
+	const [isNight, setIsNight] = React.useState(false);
+
 	return (
-		<AppContext.Provider value={{ state, setState }}>
+		<AppContext.Provider value={{ isNight, setIsNight }}>
 			{children}
 		</AppContext.Provider>
 	);
