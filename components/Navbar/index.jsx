@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { logo, iconMenuClose, iconMenu } from "../../images";
+import { logo } from "../../images";
 import styles from "../../styles/Navbar.module.css";
 import { useGlobalContext } from "../../context";
 import { Moon, Sun, Menu, X } from "react-feather";

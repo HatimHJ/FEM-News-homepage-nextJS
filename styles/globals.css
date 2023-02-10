@@ -2,10 +2,15 @@
 	--bg-color: hsl(36, 100%, 99%);
 	--bg-color-2: hsl(233, 8%, 79%);
 	--text-color: hsl(236, 13%, 42%);
+	--bg-dark-color: hsl(240, 100%, 5%);
 	--text-color-2: hsl(240, 100%, 5%);
+	--white: hsl(0, 0%, 98%);
+	--white-color-theme: hsl(0, 0%, 98%);
+	--black-color-theme: hsl(0, 0%, 3%);
+	--black: hsl(0, 0%, 3%);
 
-	--Soft-orange: hsl(35, 77%, 62%);
-	--Soft-red: hsl(5, 85%, 63%);
+	--soft-orange: hsl(35, 77%, 62%);
+	--soft-red: hsl(5, 85%, 63%);
 	background-color: var(--bg-color);
 }
 
@@ -14,6 +19,8 @@
 	--bg-color-2: hsl(0, 0%, 27%);
 	--text-color: hsl(0, 0%, 77%);
 	--text-color-2: hsl(0, 0%, 80%);
+	--white-color-theme: hsl(0, 0%, 5%);
+	--black-color-theme: hsl(0, 0%, 95%);
 
 	--Soft-orange: hsl(35, 77%, 62%);
 	--Soft-red: hsl(5, 85%, 63%);
@@ -37,8 +44,9 @@ a {
 }
 
 img {
-	max-width: 100%;
+	width: 100%;
 	height: auto;
+	object-fit: contain;
 }
 
 h1,

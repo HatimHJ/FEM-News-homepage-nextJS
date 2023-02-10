@@ -63,7 +63,7 @@
 	transition: color 0.3s;
 }
 .menu_close ul a:hover {
-	color: var(--Soft-red);
+	color: var(--soft-red);
 }
 
 @media (min-width: 768px) {

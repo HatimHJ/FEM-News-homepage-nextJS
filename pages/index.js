@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Navbar from "../components/Navbar";
+import News from "../components/News";
 
 import styles from "../styles/Home.module.css";
 import { favicon32x32 } from "../images";
@@ -23,7 +24,7 @@ export default function Home() {
 			<div className={`root ${isNight ? "night" : ""}`}>
 				<div className={`${styles.container}`}>
 					<Navbar />
-					<div className={styles.content}></div>
+					<News />
 				</div>
 			</div>
 		</>
