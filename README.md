@@ -1,6 +1,6 @@
 # live
 
-[fem-news](https://fem-news-homepage-nextjs.netlify.app/)
+<!-- [fem-news](https://fem-news-homepage-nextjs.netlify.app/) -->
 
 # Frontend Mentor - News homepage
 
